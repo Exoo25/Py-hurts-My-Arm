@@ -1,0 +1,19 @@
+{
+    "editor.cursorStyle": "block-outline",
+    "editor.cursorBlinking": "smooth",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "block",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "python.terminal.focusAfterLaunch": true,
+    "workbench.preferredDarkColorTheme": "Default High Contrast",
+    "workbench.colorTheme": "Default High Contrast",
+    "editor.fontFamily": "'Cascadia Mono', monospace",
+    "workbench.colorCustomizations": {
+      "terminal.background": "#000000", // background color (black in this case)
+      "terminal.foreground": "#00FF00", // text color (green)
+      "terminalCursor.foreground": "#00FF00", // cursor color (green)
+      "terminalCursor.background": "#000000" // cursor background color (black)
+    }
+    
+
+}

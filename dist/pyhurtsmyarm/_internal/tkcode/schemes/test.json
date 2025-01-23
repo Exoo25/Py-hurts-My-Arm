@@ -1,0 +1,13 @@
+{
+    "background": "#1e1e1e",
+    "foreground": "#d4d4d4",
+    "highlight": {
+      "keywords": "#ff79c6",
+      "strings": "#f1fa8c",
+      "functions": "#50fa7b",
+      "comments": "#6272a4"
+    },
+    "highlight_all": "#ff5555",
+    "highlight_active_line": "#44475a"
+  }
+  
