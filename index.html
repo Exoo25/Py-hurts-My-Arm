@@ -18,8 +18,26 @@
             padding: 15px 20px;
             text-align: center;
         }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ddd;
+        }
         section {
+            display: none;
             padding: 20px;
+        }
+        section.active {
+            display: block;
         }
         h2 {
             color: #333;
@@ -33,16 +51,15 @@
             padding: 2px 5px;
             border-radius: 3px;
         }
-        .screenshot {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-        }
         footer {
             background-color: #333;
             color: white;
             padding: 10px;
             text-align: center;
+        }
+        .subsection {
+            margin-top: 20px;
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -53,13 +70,31 @@
     <p>A Lightweight Python Code Editor</p>
 </header>
 
-<section>
+<nav>
+    <a href="javascript:void(0);" onclick="changeSection('about')">About</a>
+    <a href="javascript:void(0);" onclick="changeSection('features')">Features</a>
+    <a href="javascript:void(0);" onclick="changeSection('installation')">Installation</a>
+    <a href="javascript:void(0);" onclick="changeSection('aboutme')">About Me</a>
+</nav>
+
+<section id="about" class="active">
     <h2>About the App</h2>
     <p><strong>Py-Hurts-My-Arm</strong> is a free, lightweight Python code editor made in Python. It is designed for users who want a fast, simple editor without the complexity of larger IDEs like PyCharm.</p>
     <p>The name "Py-Hurts-My-Arm" comes from the fact that I don't like PyCharm, and wanted a more efficient, lightweight tool for coding.</p>
+    <h3>ScreenShots</h3>
+    <p>None</p>
+<span><image src="Screenshot 2025-01-23 224405.png" /></span>
+<p>Running</p>
+<p>Running</p><span><image src="Screenshot 2025-01-23 224857.png" height=385 /> </span><p>View Tab</p><span> <image src="Screenshot 2025-01-23 225009.png" height=385/></span>
+<h5>Edit Tab and file tab</h5>
+<span><image src="Screenshot 2025-01-23 225215.png" /></span>
+<br>
+<br>
+<br>
+<span><image src="Screenshot 2025-01-23 225225.png" /></span>
 </section>
 
-<section>
+<section id="features">
     <h2>Features</h2>
     <ul>
         <li>Syntax Highlighting for Python code</li>
@@ -69,37 +104,25 @@
         <li>File Tab for managing files</li>
         <li>Run Button to execute code directly within the editor</li>
     </ul>
+
+    <div class="subsection" id="limitations">
+        <h3>Limitations</h3>
+        <ul>
+            <li>No multi-file editing</li>
+            <li>No auto-suggestions or auto-indent</li>
+            <li>No error detection</li>
+        </ul>
+    </div>
 </section>
 
-<section>
+<section id="installation">
     <h2>Installation & Running</h2>
     <p>1. Download the compiled release from the <a href="https://github.com/Exoo25/Py-hurts-My-Arm/releases" target="_blank">Releases page</a>.</p>
     <p>2. Extract the files if necessary.</p>
     <p>3. Run the executable: <code>pyhurtsmyarm.exe</code>.</p>
 </section>
 
-<section>
-    <h2>Limitations</h2>
-    <ul>
-        <li>No multi-file editing</li>
-        <li>No auto-suggestions or auto-indent</li>
-        <li>No error detection</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Screenshots</h2>
-    <p>None</p>
-    <span><image src="Screenshot 2025-01-23 224405.png" /></span>
-    <p>Running</p>
-    <p>Running</p><span><image src="Screenshot 2025-01-23 224857.png" height=385 /> </span><p>View Tab</p><span> <image src="Screenshot 2025-01-23 225009.png" height=385/></span>
-    <h5>Edit Tab and file tab</h5>
-    <span><image src="Screenshot 2025-01-23 225215.png" /></span>
-    <br>
-    <span><image src="Screenshot 2025-01-23 225225.png" /></span>
-</section>
-
-<section>
+<section id="aboutme">
     <h2>About Me</h2>
     <p>Hello! I’m Mahdi Ali, an 8-year-old Python and HTML programmer. I love creating lightweight apps and tools that make life easier for developers. This app was created to help you code with a simple, fast editor without unnecessary features.</p>
 </section>
@@ -108,5 +131,18 @@
     <p>&copy; 2025 Mahdi Ali. All rights reserved.</p>
 </footer>
 
+<script>
+    function changeSection(sectionId) {
+        // Hide all sections
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => section.classList.remove('active'));
+        
+        // Show the clicked section
+        const activeSection = document.getElementById(sectionId);
+        activeSection.classList.add('active');
+    }
+</script>
+
 </body>
 </html>
+
