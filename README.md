@@ -1,5 +1,8 @@
 # Py-hurts-My-Arm
-Py hurts my arm is a **FREE** *lightweight* pyhton code editor
+Py hurts my arm is a **FREE** *lightweight* pyhton code editor made in **PYTHON**
+<br>
+<br>
+it's name is Py-Hurts-My-Arms Becuase I dont Like *Py Charm*
 <h4>Light weight so......</h4>
 <ul>
   <li>no multi file editing</li>
