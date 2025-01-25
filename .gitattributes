@@ -1,4 +1,5 @@
 *.py linguist-detectable=true
-*.html linguist-detectable=false
-*.tcl linguist-detectable=false
-*.tex linguist-detectable=false
+*.html linguist-detectable=true
+*.tcl linguist-detectable=true
+*.tex linguist-detectable=true
+*.ps1 linguist-detactable=true
