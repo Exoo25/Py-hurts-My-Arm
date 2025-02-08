@@ -22,9 +22,25 @@ it's name is Py-Hurts-My-Arms Becuase I dont Like *Py Charm*
 <br>
 <span><image src="Screenshot 2025-01-23 225225.png" /></span>
 <br>
-# Py-Hurts-My-Arm  💪⚡  
-A **lightweight Python code editor** designed for speed and simplicity. Perfect for beginners and pros! 🎯  
-**Features:**  
-- 🔥 Fast and lightweight (No lag, no bloat!)  
-- 🎨 Customizable themes (VS Code, Monokai, Dracula, and more)  
-- 🖥️ Simple, clean UI  
+# Py-Hurts-My-Arm  
+World Record: A Python IDE made entirely in Python using Tkinter & TkCode.  
+
+## Features  
+- Fast & Lightweight – No lag, no bloat.  
+- Customizable Themes – VS Code, Monokai, Dracula, and more.  
+- Simple UI – Clean, easy to use, and distraction-free.  
+
+## Built With  
+- Python  
+- Tkinter & TkCode – For a fast & smooth UI experience.  
+
+## Installation  
+1. Download the latest release from [GitHub](https://github.com/Exoo25/Py-hurts-My-Arm).  
+2. Run `PyHurtsMyArm.exe` (or the Python script if using the source code).  
+3. Start coding in seconds.  
+
+## Why Use This?  
+Tired of heavy IDEs? Py-Hurts-My-Arm is a fast, simple, and powerful alternative to PyCharm & VS Code.  
+
+### [Download Now](https://github.com/Exoo25/Py-hurts-My-Arm) & Start Coding!  
+
