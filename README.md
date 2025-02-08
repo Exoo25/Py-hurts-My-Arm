@@ -21,10 +21,10 @@ it's name is Py-Hurts-My-Arms Becuase I dont Like *Py Charm*
 <br>
 <br>
 <span><image src="Screenshot 2025-01-23 225225.png" /></span>
-# Py-Hurts-My-Arm SEO 💪⚡  
+<br>
+# Py-Hurts-My-Arm  💪⚡  
 A **lightweight Python code editor** designed for speed and simplicity. Perfect for beginners and pros! 🎯  
 **Features:**  
 - 🔥 Fast and lightweight (No lag, no bloat!)  
 - 🎨 Customizable themes (VS Code, Monokai, Dracula, and more)  
-- 🛠️ Auto-indent & error detection  
 - 🖥️ Simple, clean UI  
