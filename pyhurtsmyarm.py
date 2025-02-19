@@ -21,7 +21,11 @@ editor = CodeEditor(app, highlighter="good", font=("Cascadia Code", 13), bg="bla
 
 # Menu Bar
 menubar = Menu(app)
-
+def auto_indent(event):
+    current_line = editor.get("insert linestart", "insert lineend")
+    if current_line.strip().endswith(":"):
+        editor.insert("insert", "\n    ")
+        return "break"
 # Open File Function
 def openf(event=None):
     global filepath
@@ -159,6 +163,7 @@ app.bind("<Control-s>", savef)
 app.bind("<Control-Shift-B>", toggle)
 app.bind("<Control-Shift-T>", toggle_theme)
 app.bind("<Control-Shift-R>", run)
+app.bind("<Key-Release>", auto_indent)
 runbtn = Button(app, text="      ▶️", command=run, width=3)
 runbtn.pack()
 
