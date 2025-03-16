@@ -1,0 +1,7 @@
+{
+    "editor.fontFamily": "Cascadia Code ,monospace",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorStyle": "block-outline",
+    "editor.cursorBlinking": "smooth"
+    
+}

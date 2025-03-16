@@ -1,0 +1,4 @@
+{
+    "tkinter": "from tkinter import *\nfrom tkinter import filedialog, messagebox, ttk, simpledialog, colorchooser\n\napp = Tk()\n\n\napp.mainloop()",
+    "time print": "import time\nprint(strftime(\"%I:%H:%S:%p\")\ntime.sleep(1)"
+}
