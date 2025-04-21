@@ -1,0 +1,45 @@
+name: Update README with Repo Stats
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Runs every 6 hours
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Get repository info
+      id: repo
+      run: |
+        REPO="${{ github.repository }}"
+        API_URL="https://api.github.com/repos/$REPO"
+        STATS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" $API_URL)
+        STARS=$(echo "$STATS" | jq '.stargazers_count')
+        FORKS=$(echo "$STATS" | jq '.forks_count')
+        WATCHERS=$(echo "$STATS" | jq '.subscribers_count')
+        echo "STATS" >> $GITHUB_OUTPUT
+        echo "stars=$STARS" >> $GITHUB_OUTPUT
+        echo "forks=$FORKS" >> $GITHUB_OUTPUT
+        echo "watchers=$WATCHERS" >> $GITHUB_OUTPUT
+
+    - name: Update README.md
+      run: |
+        sed -i '/<!-- STATS:START -->/,/<!-- STATS:END -->/c\
+<!-- STATS:START -->\
+\\u2B50 Stars: ${{ steps.repo.outputs.stars }}\
+\\U0001F374 Forks: ${{ steps.repo.outputs.forks }}\
+\\U0001F440 Watchers: ${{ steps.repo.outputs.watchers }}\
+<!-- STATS:END -->' README.md
+
+    - name: Commit & Push
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add README.md
+        git commit -m "🔁 Updated repo stats in README" || echo "No changes to commit"
+        git push
