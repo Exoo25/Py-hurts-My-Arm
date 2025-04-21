@@ -29,12 +29,14 @@ jobs:
 
     - name: Update README.md
       run: |
-        sed -i '/<!-- STATS:START -->/,/<!-- STATS:END -->/c\
-<!-- STATS:START -->\
-\\u2B50 Stars: ${{ steps.repo.outputs.stars }}\
-\\U0001F374 Forks: ${{ steps.repo.outputs.forks }}\
-\\U0001F440 Watchers: ${{ steps.repo.outputs.watchers }}\
-<!-- STATS:END -->' README.md
+        STARS="${{ steps.repo.outputs.stars }}"
+        FORKS="${{ steps.repo.outputs.forks }}"
+        WATCHERS="${{ steps.repo.outputs.watchers }}"
+    
+        NEW_STATS="<!-- STATS:START -->\n\u2B50 Stars: $STARS\n\U0001F374 Forks: $FORKS\n\U0001F440 Watchers: $WATCHERS\n<!-- STATS:END -->"
+    
+        sed -i "/<!-- STATS:START -->/,/<!-- STATS:END -->/c$NEW_STATS" README.md
+
 
     - name: Commit & Push
       run: |
